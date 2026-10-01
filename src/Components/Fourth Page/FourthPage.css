@@ -1,0 +1,220 @@
+.fourth-bg{
+    background-color: rgba(192, 172, 147, 0.362);
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 3rem 6rem 0 6rem;
+
+    background-color: #8989ff;
+    background-image: radial-gradient(#272d98 10%, transparent 10%),
+                        radial-gradient(#252b96 10%, transparent 10%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+}
+.fourth-heading{
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.video-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding:1rem ;
+    height: 350px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.212);
+    border-radius: 2rem;
+}
+.video-container{
+    flex: 0 0 40%;
+    align-items: center;
+    height: 100%;
+  }
+.video-container video{
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+    object-fit: cover;
+    object-position: 50% 35%;
+    border-radius: 1.5rem;
+}
+.video-text{
+    /* flex: 0 0 60%; */
+    font-family:"SUSE Mono", sans-serif;
+    font-weight: 600;
+    color: #ffe1ed;
+    color: #c4dfff;
+    font-size: 1rem;
+    text-align: start;
+    padding: 2rem;
+}
+
+.h-line{
+  width: 100%;
+  height: 2px;
+  background-color: aliceblue;
+  border-radius: 50%;
+}
+
+.ques-div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: "Quicksand", sans-serif;
+    margin-top: 1.5rem;
+}
+.ques-div p{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fef4a1;
+    text-shadow: 0 0 3px #FFEB3B;;
+    text-transform: uppercase;
+}
+.btns button{
+    width: 80px;
+    background-color:#ff3665;
+    color: rgb(255, 239, 249);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-family: "BBH Sans Bogle", sans-serif;
+    margin: 0 1rem;
+    padding: 0.2rem 1rem;
+    border-radius: 2rem;
+    border: 2px solid black;
+    font-size: 1.5rem;
+}
+
+@media (max-width:1200px) {
+  .video-text{
+    font-size: 0.85rem;
+    padding: 1.5rem;
+  }
+  .fourth-heading{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .ques-div p{
+    font-size: 1.5rem;
+  }
+  .btns button{
+    font-size: 1rem;
+    width: 60px;
+  }
+}
+
+
+
+/* font-family:"SUSE Mono", sans-serif; */
+
+.final-heading{
+    font-size: 7rem;
+    font-family: "BBH Sans Bogle", sans-serif;
+    letter-spacing: 1px;
+    width: 100%;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    color: #ff368d;
+    text-shadow: 0 0 5px rgb(100, 0, 63);
+}
+
+.floating-item {
+  position: absolute;
+  bottom: -50px;
+  animation: floatUp 5s linear infinite;
+  animation-delay: 3s;
+  opacity: 0.85;
+  color: #ff6fae;
+  font-weight: 700;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* Big heart animation */
+.big-heart {
+  position: absolute;
+  bottom: -700px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: riseHeart 4s ease-out forwards;
+  animation-delay: 6s;
+  z-index: 5;
+}
+.big-heart img{
+    width: 700px;
+}
+
+@keyframes riseHeart {
+  0% {
+    bottom: -700px;
+  }
+  100% {
+    bottom: 6%;
+  }
+}
+
+@media (max-width:576px) {
+  .fourth-bg{
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+  }
+  .fourth-heading{
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .video-text-container{
+    flex-direction: column;
+    align-items: stretch; /* make children full width */
+    justify-content: flex-start; /* stack from top */
+    height: 610px; /* remove fixed height */
+    gap: 0.5rem;
+  }
+  .video-container{
+     width: 100%;
+      height: 50%;
+  }
+  .video-container video{
+     width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: 50% 35%;
+    border-radius: 1.5rem;
+  }
+  .video-text{
+    font-size:0.73rem ;
+    padding: 0 0.5rem;
+  }
+  .final-heading{
+    font-size: 3.2rem;
+  }
+
+  @keyframes riseHeart {
+    0% {
+      bottom: -700px;
+    }
+    100% {
+      bottom: 48%;
+    }
+  }
+  }

@@ -1,0 +1,10 @@
+@import "tailwindcss";
+image, video{
+    background: linear-gradient(120deg, #b3b3b3e2, #a7a7a7db, #b6b6b6d9);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.4s infinite;
+}
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
